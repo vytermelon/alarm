@@ -1,0 +1,17 @@
+{% extends "questions/index.html" %}
+
+
+{% block content %}
+{% if data %}
+    <ul>
+    {% for i in data %}
+       {% for j in i %}
+        <p>{{ j }}</p>
+        {% endfor %}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No queries were made.</p>
+{% endif %}
+
+{% endblock %}

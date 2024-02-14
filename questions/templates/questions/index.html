@@ -1,0 +1,16 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="location.href='{% url 'write' %}'">Add task</button>
+<button onclick="location.href='{% url 'complete' %}'">Review tasks</button>
+<button onclick="location.href='{% url 'check' %}'">Submit day task</button>
+<button onclick="location.href='{% url 'status' %}'">Check status</button>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

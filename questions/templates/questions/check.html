@@ -1,0 +1,15 @@
+{% extends "questions/index.html" %}
+
+
+{% block content %}
+{% if dates %}
+    <ul>
+    {% for question in dates %}
+        <li><a href="{% url 'gpt' question.day %}" >{{ question.day }}</a>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No day tasks added.</p>
+{% endif %}
+
+{% endblock %}

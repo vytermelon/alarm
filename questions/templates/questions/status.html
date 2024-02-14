@@ -1,0 +1,14 @@
+{% extends "questions/index.html" %}
+
+
+{% block content %}
+{% if verify %}
+{% for i in verify %}
+    <p>Current Status :{{ i.complete }}> True: no tasks, False: task pending hurry up.</p>
+{% endfor %}
+
+{% else %}
+    <p>Cant check status.</p>
+{% endif %}
+
+{% endblock %}
